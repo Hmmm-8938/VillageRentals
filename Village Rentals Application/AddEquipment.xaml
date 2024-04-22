@@ -55,5 +55,62 @@
                 ></BoxView>
             </VerticalStackLayout>
         </HorizontalStackLayout>
+        <HorizontalStackLayout>
+            <VerticalStackLayout>
+                <HorizontalStackLayout>
+                    <Label
+                        Text="EQUIPMENT ID #"
+                        WidthRequest="150"
+                    ></Label>
+                    <Entry
+                        Margin="25, 0, 0, 0"
+                        BackgroundColor="DodgerBlue"
+                    ></Entry>
+                </HorizontalStackLayout>
+                <HorizontalStackLayout>
+                    <Label
+                        Text="CATEGORY"
+                        WidthRequest="150"
+                    ></Label>
+                    <Entry
+                        Margin="25, 0, 0, 0"
+                        BackgroundColor="DodgerBlue"
+                    ></Entry>
+                </HorizontalStackLayout>
+                <HorizontalStackLayout>
+                    <Label
+                        Text="NAME"
+                        WidthRequest="150"
+                    ></Label>
+                    <Entry
+                        Margin="25, 0, 0, 0"
+                        BackgroundColor="DodgerBlue"
+                    ></Entry>
+                </HorizontalStackLayout>
+                <HorizontalStackLayout>
+                    <Label
+                        Text="DESCRIPTION"
+                        WidthRequest="150"
+                    ></Label>
+                    <Entry
+                        Margin="25, 0, 0, 0"
+                        BackgroundColor="DodgerBlue"
+                    ></Entry>
+                </HorizontalStackLayout>
+                <HorizontalStackLayout>
+                    <Label
+                        Text="DAILY RENTAL COST"
+                        WidthRequest="150"
+                    ></Label>
+                    <Entry
+                        Margin="25, 0, 0, 0"
+                        BackgroundColor="DodgerBlue"
+                    ></Entry>
+                </HorizontalStackLayout>
+            </VerticalStackLayout>
+            <Button
+                Text="Submit"
+            ></Button>
+        </HorizontalStackLayout>
     </VerticalStackLayout>
 </ContentPage>
