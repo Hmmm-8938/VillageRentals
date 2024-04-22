@@ -37,5 +37,95 @@
                 ></BoxView>
             </VerticalStackLayout>
         </HorizontalStackLayout>
+        <HorizontalStackLayout Margin="0,25,0,0">
+            <VerticalStackLayout Margin="25,0,50,0">
+                <HorizontalStackLayout HeightRequest="50" Margin="0,0,0,15">
+                    <Label
+                        Text="RENTAL ID #"
+                        WidthRequest="275"
+                        VerticalOptions="Center"
+                        FontAttributes="Bold"
+                        FontSize="Medium"
+                        FontFamily="Courier New"
+                    ></Label>
+                    <Entry
+                        Margin="25, 0, 0, 0"
+                        BackgroundColor="DodgerBlue"
+                        WidthRequest="500"
+                    ></Entry>
+                </HorizontalStackLayout>
+                <HorizontalStackLayout HeightRequest="50" Margin="0,0,0,15">
+                    <Label
+                        Text="CURRENT DATE"
+                        WidthRequest="275"
+                        VerticalOptions="Center"
+                        FontAttributes="Bold"
+                        FontSize="Medium"
+                        FontFamily="Courier New"
+                    ></Label>
+                    <!-- Add Items Source to this picker -->
+                    <DatePicker
+                        Margin="25, 0, 0, 0"
+                        BackgroundColor="DodgerBlue"
+                        WidthRequest="500"
+                    ></DatePicker>
+                </HorizontalStackLayout>
+                <HorizontalStackLayout HeightRequest="50" Margin="0,0,0,15">
+                    <Label
+                        Text="CUSTOMER ID #"
+                        WidthRequest="275"
+                        VerticalOptions="Center"
+                        FontAttributes="Bold"
+                        FontSize="Medium"
+                        FontFamily="Courier New"
+                    ></Label>
+                    <Entry
+                        Margin="25, 0, 0, 0"
+                        BackgroundColor="DodgerBlue"
+                        WidthRequest="500"
+                    ></Entry>
+                </HorizontalStackLayout>
+                <HorizontalStackLayout HeightRequest="50" Margin="0,0,0,15">
+                    <Label
+                        Text="CUSTOMER LAST NAME"
+                        WidthRequest="275"
+                        VerticalOptions="Center"
+                        FontAttributes="Bold"
+                        FontSize="Medium"
+                        FontFamily="Courier New"
+                    ></Label>
+                    <Entry
+                        Margin="25, 0, 0, 0"
+                        BackgroundColor="DodgerBlue"
+                        WidthRequest="500"
+                    ></Entry>
+                </HorizontalStackLayout>
+                <HorizontalStackLayout HeightRequest="50" Margin="0,0,0,15">
+                    <Label
+                        Text="EQUIPMENT"
+                        WidthRequest="275"
+                        VerticalOptions="Center"
+                        FontAttributes="Bold"
+                        FontSize="Medium"
+                        FontFamily="Courier New"
+                    ></Label>
+                    <Picker
+                        Margin="25, 0, 0, 0"
+                        BackgroundColor="DodgerBlue"
+                        WidthRequest="500"
+                    ></Picker>
+                </HorizontalStackLayout>
+            </VerticalStackLayout>
+            <Button
+                Margin="50,130,0,130"
+                WidthRequest="200"
+                Text="Submit"
+                FontFamily="Courier New"
+                TextColor="Black"
+                FontAttributes="Bold"
+                FontSize="Large"
+                BackgroundColor="DodgerBlue"
+            ></Button>
+        </HorizontalStackLayout>
     </VerticalStackLayout>
 </ContentPage>

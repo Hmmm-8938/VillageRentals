@@ -37,5 +37,8 @@
                 ></BoxView>
             </VerticalStackLayout>
         </HorizontalStackLayout>
+        <ListView HorizontalScrollBarVisibility="Always">
+            
+        </ListView>
     </VerticalStackLayout>
 </ContentPage>

@@ -55,5 +55,34 @@
                 ></BoxView>
             </VerticalStackLayout>
         </HorizontalStackLayout>
+        <HorizontalStackLayout Margin="0,25,0,0">
+            <VerticalStackLayout Margin="25,0,50,0">
+                <HorizontalStackLayout HeightRequest="50" Margin="0,130,0,130">
+                    <Label
+                Text="EQUIPMENT ID #"
+                WidthRequest="250"
+                VerticalOptions="Center"
+                FontAttributes="Bold"
+                FontSize="Medium"
+                FontFamily="Courier New"
+            ></Label>
+                    <Entry
+                Margin="25, 0, 0, 0"
+                BackgroundColor="DodgerBlue"
+                WidthRequest="500"
+            ></Entry>
+                </HorizontalStackLayout>
+            </VerticalStackLayout>
+            <Button
+        Margin="50,130,0,130"
+        WidthRequest="200"
+        Text="Submit"
+        FontFamily="Courier New"
+        TextColor="Black"
+        FontAttributes="Bold"
+        FontSize="Large"
+        BackgroundColor="DodgerBlue"
+    ></Button>
+        </HorizontalStackLayout>
     </VerticalStackLayout>
 </ContentPage>
