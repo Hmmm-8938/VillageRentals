@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Village_Rentals_Application.VillageRentalsMenu"
+             Title="VillageRentalsMenu"
+             NavigationPage.HasNavigationBar="False">
+    <VerticalStackLayout BackgroundColor="LightGray">
+        <Label
+            Text="Village Rentals"
+            Margin="40, 20, 0, 0"
+            FontAttributes="Bold"
+            FontSize="75"
+            HorizontalTextAlignment="Start"
+            FontFamily="Courier New"
+        ></Label>
+        <HorizontalStackLayout Margin="75, 175, 0, 0">
+            <Button
+                HeightRequest="200"
+                WidthRequest="200"
+                CornerRadius="100"
+                BackgroundColor="DodgerBlue"
+                Margin="0,0,50,0"
+                Text="ADD / DELETE EQUIPMENT"
+                FontAttributes="Bold"
+                FontFamily="Courier New"
+                FontSize="Medium"
+                LineBreakMode="WordWrap"
+                TextColor="Black"
+                Clicked="AddDeleteEquipment_Clicked"
+            ></Button>
+            <Button
+                HeightRequest="200"
+                WidthRequest="200"
+                CornerRadius="100"
+                BackgroundColor="DodgerBlue"
+                Margin="0,0,50,0"
+                Text="ADD NEW CLIENT"
+                FontAttributes="Bold"
+                FontFamily="Courier New"
+                FontSize="Medium"
+                LineBreakMode="WordWrap"
+                TextColor="Black"
+                Clicked="AddNewClient_Clicked"
+            ></Button>
+            <Button
+                HeightRequest="200"
+                WidthRequest="200"
+                CornerRadius="100"
+                BackgroundColor="DodgerBlue"
+                Margin="0,0,50,0"
+                Text="DISPLAY EQUIPMENT"
+                FontAttributes="Bold"
+                FontFamily="Courier New"
+                FontSize="Medium"
+                LineBreakMode="WordWrap"
+                TextColor="Black"
+                Clicked="DisplayEquipment_Clicked"
+            ></Button>
+            <Button
+                HeightRequest="200"
+                WidthRequest="200"
+                CornerRadius="100"
+                BackgroundColor="DodgerBlue"
+                Margin="0,0,50,0"
+                Text="DISPLAY ALL CLIENTS"
+                FontAttributes="Bold"
+                FontFamily="Courier New"
+                FontSize="Medium"
+                LineBreakMode="WordWrap"
+                TextColor="Black"
+                Clicked="DisplayAllClients_Clicked"
+            ></Button>
+            <Button
+                HeightRequest="200"
+                WidthRequest="200"
+                CornerRadius="100"
+                BackgroundColor="DodgerBlue"
+                Margin="0,0,50,0"
+                FontAttributes="Bold"
+                FontFamily="Courier New"
+                FontSize="Medium"
+                Text="PROCESS RENTAL"
+                LineBreakMode="WordWrap"
+                TextColor="Black"
+                Clicked="ProcessRental_Clicked"
+            ></Button>
+        </HorizontalStackLayout>
+    </VerticalStackLayout>
+</ContentPage>
