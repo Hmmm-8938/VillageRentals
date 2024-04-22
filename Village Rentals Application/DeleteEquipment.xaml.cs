@@ -6,4 +6,13 @@ public partial class DeleteEquipment : ContentPage
 	{
 		InitializeComponent();
 	}
+
+    private async void AddEquipment_Clicked(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new AddEquipment());
+    }
+    private async void Home_Clicked(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new VillageRentalsMenu());
+    }
 }

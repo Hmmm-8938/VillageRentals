@@ -2,11 +2,58 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Village_Rentals_Application.AddEquipment"
-             Title="AddEquipment">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+             Title="AddEquipment"
+             NavigationPage.HasNavigationBar="False"
+             NavigationPage.HasBackButton="False">
+    <VerticalStackLayout BackgroundColor="LightGray">
+        <Button
+             Text="Village Rentals"
+             Margin="40, 20, 0, 0"
+             FontAttributes="Bold"
+             FontSize="75"
+             HorizontalOptions="Start"
+             WidthRequest="750"
+             FontFamily="Courier New"
+             BackgroundColor="Transparent"
+             TextColor="Black"
+             Clicked="Home_Clicked"
+        ></Button>
+        <HorizontalStackLayout HeightRequest="50" BackgroundColor="Gray">
+            <VerticalStackLayout>
+                <Button
+                    WidthRequest="300"
+                    HeightRequest="40"
+                    BackgroundColor="Transparent"
+                    Text="ADD EQUIPMENT"
+                    TextColor="Black"
+                    FontAttributes="Bold"
+                    FontFamily="Courier New"
+                    FontSize="Large"
+                ></Button>
+                <BoxView
+                    WidthRequest="300"
+                    HeightRequest="10"
+                    BackgroundColor="DodgerBlue"
+                ></BoxView>
+            </VerticalStackLayout>
+            <VerticalStackLayout>
+                <Button
+                    WidthRequest="350"
+                    HeightRequest="40"
+                    BackgroundColor="Transparent"
+                    Text="DELETE EQUIPMENT"
+                    TextColor="Black"
+                    FontAttributes="Bold"
+                    FontFamily="Courier New"
+                    FontSize="Large"
+                    Clicked="DeleteEquipment_Clicked"
+                ></Button>
+                <BoxView
+                    WidthRequest="350"
+                    HeightRequest="10"
+                    BackgroundColor="Transparent"
+                ></BoxView>
+            </VerticalStackLayout>
+        </HorizontalStackLayout>
     </VerticalStackLayout>
 </ContentPage>

@@ -6,4 +6,8 @@ public partial class DisplayAllClients : ContentPage
 	{
 		InitializeComponent();
 	}
+    private async void Home_Clicked(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new VillageRentalsMenu());
+    }
 }

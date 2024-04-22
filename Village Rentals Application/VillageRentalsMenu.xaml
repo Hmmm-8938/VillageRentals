@@ -3,17 +3,21 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Village_Rentals_Application.VillageRentalsMenu"
              Title="VillageRentalsMenu"
-             NavigationPage.HasNavigationBar="False">
+             NavigationPage.HasNavigationBar="False"
+             NavigationPage.HasBackButton="False">
     <VerticalStackLayout BackgroundColor="LightGray">
-        <Label
-            Text="Village Rentals"
-            Margin="40, 20, 0, 0"
-            FontAttributes="Bold"
-            FontSize="75"
-            HorizontalTextAlignment="Start"
-            FontFamily="Courier New"
-        ></Label>
-        <HorizontalStackLayout Margin="75, 175, 0, 0">
+        <Button
+                Text="Village Rentals"
+                Margin="40, 20, 0, 0"
+                FontAttributes="Bold"
+                FontSize="75"
+                HorizontalOptions="Start"
+                WidthRequest="750"
+                FontFamily="Courier New"
+                BackgroundColor="Transparent"
+                TextColor="Black"
+            ></Button>
+            <HorizontalStackLayout Margin="75, 100, 0, 0">
             <Button
                 HeightRequest="200"
                 WidthRequest="200"
