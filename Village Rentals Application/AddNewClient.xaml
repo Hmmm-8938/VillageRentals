@@ -52,6 +52,7 @@
                 Margin="25, 0, 0, 0"
                 BackgroundColor="DodgerBlue"
                 WidthRequest="500"
+                x:Name="ClientID"
             ></Entry>
                 </HorizontalStackLayout>
                 <HorizontalStackLayout HeightRequest="50" Margin="0,0,0,15">
@@ -68,6 +69,7 @@
                         Margin="25, 0, 0, 0"
                         BackgroundColor="DodgerBlue"
                         WidthRequest="500"
+                        x:Name="ClientLastName"
                     ></Entry>
                 </HorizontalStackLayout>
                 <HorizontalStackLayout HeightRequest="50" Margin="0,0,0,15">
@@ -83,6 +85,7 @@
                 Margin="25, 0, 0, 0"
                 BackgroundColor="DodgerBlue"
                 WidthRequest="500"
+                x:Name="ClientFirstName"
             ></Entry>
                 </HorizontalStackLayout>
                 <HorizontalStackLayout HeightRequest="50" Margin="0,0,0,15">
@@ -98,6 +101,7 @@
                 Margin="25, 0, 0, 0"
                 BackgroundColor="DodgerBlue"
                 WidthRequest="500"
+                x:Name="ClientContactPhone"
             ></Entry>
                 </HorizontalStackLayout>
                 <HorizontalStackLayout HeightRequest="50" Margin="0,0,0,15">
@@ -113,6 +117,7 @@
                 Margin="25, 0, 0, 0"
                 BackgroundColor="DodgerBlue"
                 WidthRequest="500"
+                x:Name="ClientEmail"
             ></Entry>
                 </HorizontalStackLayout>
             </VerticalStackLayout>
@@ -125,6 +130,7 @@
         FontAttributes="Bold"
         FontSize="Large"
         BackgroundColor="DodgerBlue"
+        Clicked="Submit_Clicked"
     ></Button>
         </HorizontalStackLayout>
     </VerticalStackLayout>

@@ -52,6 +52,7 @@
                         Margin="25, 0, 0, 0"
                         BackgroundColor="DodgerBlue"
                         WidthRequest="500"
+                        x:Name="RentalId"
                     ></Entry>
                 </HorizontalStackLayout>
                 <HorizontalStackLayout HeightRequest="50" Margin="0,0,0,15">
@@ -68,26 +69,29 @@
                         Margin="25, 0, 0, 0"
                         BackgroundColor="DodgerBlue"
                         WidthRequest="500"
+                        x:Name="RentalDate"
                     ></DatePicker>
                 </HorizontalStackLayout>
                 <HorizontalStackLayout HeightRequest="50" Margin="0,0,0,15">
                     <Label
-                        Text="CUSTOMER ID #"
+                        Text="Client"
                         WidthRequest="275"
                         VerticalOptions="Center"
                         FontAttributes="Bold"
                         FontSize="Medium"
                         FontFamily="Courier New"
                     ></Label>
-                    <Entry
+                    <Picker
                         Margin="25, 0, 0, 0"
                         BackgroundColor="DodgerBlue"
                         WidthRequest="500"
-                    ></Entry>
+                        x:Name="clientPicker"
+                        SelectedIndexChanged="clientPicker_SelectedIndexChanged"
+                    ></Picker>
                 </HorizontalStackLayout>
                 <HorizontalStackLayout HeightRequest="50" Margin="0,0,0,15">
                     <Label
-                        Text="CUSTOMER LAST NAME"
+                        Text="CLIENT LAST NAME"
                         WidthRequest="275"
                         VerticalOptions="Center"
                         FontAttributes="Bold"
@@ -98,6 +102,7 @@
                         Margin="25, 0, 0, 0"
                         BackgroundColor="DodgerBlue"
                         WidthRequest="500"
+                        x:Name="ClientLastName"
                     ></Entry>
                 </HorizontalStackLayout>
                 <HorizontalStackLayout HeightRequest="50" Margin="0,0,0,15">
@@ -113,6 +118,7 @@
                         Margin="25, 0, 0, 0"
                         BackgroundColor="DodgerBlue"
                         WidthRequest="500"
+                        x:Name="equipmentPicker"
                     ></Picker>
                 </HorizontalStackLayout>
             </VerticalStackLayout>
@@ -125,6 +131,7 @@
                 FontAttributes="Bold"
                 FontSize="Large"
                 BackgroundColor="DodgerBlue"
+                Clicked="Submit_Clicked"
             ></Button>
         </HorizontalStackLayout>
     </VerticalStackLayout>

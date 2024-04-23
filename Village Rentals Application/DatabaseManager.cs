@@ -17,6 +17,8 @@ namespace Village_Rentals_Application
 
             database.CreateTable<Equipment>();
             database.CreateTable<Equipment_Categories>();
+            database.CreateTable<Client>();
+            database.CreateTable<Rental>();
         }
 
         public static List<Equipment_Categories> GetAllCategorys()
@@ -31,13 +33,27 @@ namespace Village_Rentals_Application
 
         public static void AddEquipment(int equipmentID, string equipmentCategory, string equipmentName, string equipmentDescription, double dailyRentalCost)
         {
-            Equipment equipment = new Equipment(equipmentID, equipmentCategory, equipmentName, equipmentDescription, dailyRentalCost);
             database.Execute($@"INSERT INTO EQUIPMENT (EquipmentId, EquipmentCategory, EquipmentName, EquipmentDescription, EquipmentDailyRentalCost) VALUES ('{equipmentID}', '{equipmentCategory}', '{equipmentName}', '{equipmentDescription}', '{dailyRentalCost}')");
         }
 
         public static void deleteEquipment(int equipmentID)
         {
             database.Delete<Equipment>(equipmentID);
+        }
+
+        public static void AddClient(int clientID, string clientLastName, string clientFirstName, string clientContactPhone, string clientEmail)
+        {
+            database.Execute($@"INSERT INTO CLIENT (clientID, clientLastName, clientFirstName, clientContactPhone, clientEmail) VALUES ('{clientID}', '{clientLastName}', '{clientFirstName}', '{clientContactPhone}', '{clientEmail}')");
+        }
+
+        public static List<Client> GetAllClients()
+        {
+            return database.Query<Client>($@"SELECT * FROM Client");
+        }
+
+        public static void AddRental(int rentalId, DateTime rentalDate, string client, string customerLastName, string rentalEquipment)
+        {
+            database.Execute($@"INSERT INTO RENTAL (rentalId, rentalDate, client, customerLastName, rentalEquipment) VALUES ('{rentalId}','{rentalDate}','{client}','{customerLastName}','{rentalEquipment}')");
         }
     }
 }

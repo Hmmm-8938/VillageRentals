@@ -10,4 +10,17 @@ public partial class AddNewClient : ContentPage
     {
         await Navigation.PushAsync(new VillageRentalsMenu());
     }
+
+    private async void Submit_Clicked(object sender, EventArgs e)
+    {
+        int clientIDInt = int.Parse(ClientID.Text);
+        string clientLastName = ClientLastName.Text;
+        string clientFirstName = ClientFirstName.Text;
+        string clientContactPhone = ClientContactPhone.Text;
+        string clientEmail = ClientEmail.Text;
+        DatabaseManager.AddClient(clientIDInt, clientLastName, clientFirstName, clientContactPhone, clientEmail);
+        await DisplayAlert("Client Added", "You have succcessfully added a new client.", "OK");
+        await Navigation.PushAsync(new AddEquipment());
+        await Navigation.PushAsync(new AddNewClient());
+    }
 }

@@ -37,8 +37,20 @@
                 ></BoxView>
             </VerticalStackLayout>
         </HorizontalStackLayout>
-        <ListView HorizontalScrollBarVisibility="Always">
-        
+        <ListView x:Name="clientList" VerticalScrollBarVisibility="Always" WidthRequest="1500" HeightRequest="750" BackgroundColor="Black" Margin="0,40,0,0">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <HorizontalStackLayout BackgroundColor="Grey">
+                            <Label Text="{Binding clientID}" TextColor="White" FontAttributes="Bold" FontSize="Large" Margin="50,0,0,0"></Label>
+                            <Label Text="{Binding clientLastName}" TextColor="White" FontAttributes="Bold" FontSize="Large" Margin="50,0,0,0"></Label>
+                            <Label Text="{Binding clientFirstName}" TextColor="White" FontAttributes="Bold" FontSize="Large" Margin="50,0,0,0"></Label>
+                            <Label Text="{Binding clientContactPhone}" TextColor="White" FontAttributes="Bold" FontSize="Large" Margin="50,0,0,0"></Label>
+                            <Label Text="{Binding clientEmail}" TextColor="White" FontAttributes="Bold" FontSize="Large" Margin="50,0,0,0"></Label>
+                        </HorizontalStackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
         </ListView>
     </VerticalStackLayout>
 </ContentPage>
