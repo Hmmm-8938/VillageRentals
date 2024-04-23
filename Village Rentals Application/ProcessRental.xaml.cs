@@ -33,6 +33,7 @@ public partial class ProcessRental : ContentPage
         DatabaseManager.AddRental(rentalID, rentalDate, clientString, clientLastName, equipmentString, returnDate);
         DatabaseManager.Cost(equipment.EquipmentDailyRentalCost, rentalDate, returnDate);
         await DisplayAlert("Rental Added", "You have successfully processed a rental.", "OK");
+        await Navigation.PushAsync(new ProcessRental());
     }
 
     private void clientPicker_SelectedIndexChanged(object sender, EventArgs e)
