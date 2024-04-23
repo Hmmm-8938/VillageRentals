@@ -70,6 +70,7 @@
                         Margin="25, 0, 0, 0"
                         BackgroundColor="DodgerBlue"
                         WidthRequest="500"
+                        x:Name="EquipmentID"
                     ></Entry>
                 </HorizontalStackLayout>
                 <HorizontalStackLayout HeightRequest="50" Margin="0,0,0,15">
@@ -83,9 +84,11 @@
                     ></Label>
                     <!-- Add Items Source to this picker -->
                     <Picker
+                        x:Name="CategoryPicker"
                         Margin="25, 0, 0, 0"
                         BackgroundColor="DodgerBlue"
                         WidthRequest="500"
+                        SelectedIndexChanged="CategoryPicker_SelectedIndexChanged"
                     ></Picker>
                 </HorizontalStackLayout>
                 <HorizontalStackLayout HeightRequest="50" Margin="0,0,0,15">
@@ -101,6 +104,7 @@
                         Margin="25, 0, 0, 0"
                         BackgroundColor="DodgerBlue"
                         WidthRequest="500"
+                        x:Name="EquipmentName"
                     ></Entry>
                 </HorizontalStackLayout>
                 <HorizontalStackLayout HeightRequest="50" Margin="0,0,0,15">
@@ -116,6 +120,7 @@
                         Margin="25, 0, 0, 0"
                         BackgroundColor="DodgerBlue"
                         WidthRequest="500"
+                        x:Name="EquipmentDescription"
                     ></Entry>
                 </HorizontalStackLayout>
                 <HorizontalStackLayout HeightRequest="50" Margin="0,0,0,15">
@@ -131,6 +136,7 @@
                         Margin="25, 0, 0, 0"
                         BackgroundColor="DodgerBlue"
                         WidthRequest="500"
+                        x:Name="EquipmentDailyRentalCost"
                     ></Entry>
                 </HorizontalStackLayout>
             </VerticalStackLayout>
@@ -143,6 +149,7 @@
                 FontAttributes="Bold"
                 FontSize="Large"
                 BackgroundColor="DodgerBlue"
+                Clicked="Submit_Clicked"
             ></Button>
         </HorizontalStackLayout>
     </VerticalStackLayout>

@@ -66,11 +66,12 @@
                 FontSize="Medium"
                 FontFamily="Courier New"
             ></Label>
-                    <Entry
+                    <Picker
+                x:Name="equipmentPicker"
                 Margin="25, 0, 0, 0"
                 BackgroundColor="DodgerBlue"
                 WidthRequest="500"
-            ></Entry>
+            ></Picker>
                 </HorizontalStackLayout>
             </VerticalStackLayout>
             <Button
@@ -82,6 +83,7 @@
         FontAttributes="Bold"
         FontSize="Large"
         BackgroundColor="DodgerBlue"
+        Clicked="Submit_Clicked"
     ></Button>
         </HorizontalStackLayout>
     </VerticalStackLayout>

@@ -5,6 +5,7 @@ public partial class VillageRentalsMenu : ContentPage
 	public VillageRentalsMenu()
 	{
 		InitializeComponent();
+        DatabaseManager database = new DatabaseManager();
 	}
 
     private async void AddDeleteEquipment_Clicked(object sender, EventArgs e)
