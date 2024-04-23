@@ -61,7 +61,6 @@ namespace Village_Rentals_Application
             string isoReturnDate = returnDate.ToString("yyyy-MM-dd");
             string isoRentalDate = rentalDate.ToString("yyyy-MM-dd");
             database.Execute($@"UPDATE RENTAL SET cost = (julianday('{returnDate.ToString("yyyy-MM-dd")}') - julianday('{rentalDate.ToString("yyyy-MM-dd")}')) * {dailyRentalCost} WHERE cost IS NULL");
-            //database.Execute($@"UPDATE RENTAL SET cost = DATEDIFF({isoReturnDate}, {isoRentalDate}) * {dailyRentalCost} WHERE cost IS NULL");
         }
     }
 }
