@@ -21,10 +21,13 @@ namespace Village_Rentals_Application
         public string customerLastName { get; set; }
         [Required]
         public string rentalEquipment { get; set; }
+        [Required]
+        public DateTime returnDate { get; set; }
+        public double cost { get; set; }
 
         public override string ToString()
         {
-            return ($"{rentalId} {rentalDate} {client} {customerLastName} {rentalEquipment}");
+            return ($"{rentalId} {rentalDate} {client} {customerLastName} {rentalEquipment} {returnDate} {cost}");
         }
 
         public Rental()
@@ -32,13 +35,15 @@ namespace Village_Rentals_Application
 
         }
 
-        public Rental(int rentalId, DateTime rentalDate, string client, string customerLastName, string rentalEquipment)
+        public Rental(int rentalId, DateTime rentalDate, string client, string customerLastName, string rentalEquipment, DateTime returnDate, double cost)
         {
             this.rentalId = rentalId;
             this.rentalDate = rentalDate;
             this.client = client;
             this.customerLastName = customerLastName;
             this.rentalEquipment = rentalEquipment;
+            this.returnDate = returnDate;
+            this.cost = cost;
         }
     }
 }

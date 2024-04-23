@@ -25,11 +25,13 @@ public partial class ProcessRental : ContentPage
         Client client = (Client)clientPicker.SelectedItem;
         string clientLastName = ClientLastName.Text;
         Equipment equipment = (Equipment)equipmentPicker.SelectedItem;
+        DateTime returnDate = ReturnDatePicker.Date;
 
         string clientString = JsonConvert.SerializeObject(client);
         string equipmentString = JsonConvert.SerializeObject(equipment);
 
-        DatabaseManager.AddRental(rentalID, rentalDate, clientString, clientLastName, equipmentString);
+        DatabaseManager.AddRental(rentalID, rentalDate, clientString, clientLastName, equipmentString, returnDate);
+        DatabaseManager.Cost(equipment.EquipmentDailyRentalCost, rentalDate, returnDate);
         await DisplayAlert("Rental Added", "You have successfully processed a rental.", "OK");
     }
 

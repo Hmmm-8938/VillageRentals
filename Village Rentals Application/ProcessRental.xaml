@@ -57,7 +57,7 @@
                 </HorizontalStackLayout>
                 <HorizontalStackLayout HeightRequest="50" Margin="0,0,0,15">
                     <Label
-                        Text="CURRENT DATE"
+                        Text="RENTAL DATE"
                         WidthRequest="275"
                         VerticalOptions="Center"
                         FontAttributes="Bold"
@@ -74,7 +74,7 @@
                 </HorizontalStackLayout>
                 <HorizontalStackLayout HeightRequest="50" Margin="0,0,0,15">
                     <Label
-                        Text="Client"
+                        Text="CLIENT"
                         WidthRequest="275"
                         VerticalOptions="Center"
                         FontAttributes="Bold"
@@ -120,6 +120,22 @@
                         WidthRequest="500"
                         x:Name="equipmentPicker"
                     ></Picker>
+                </HorizontalStackLayout>
+                <HorizontalStackLayout HeightRequest="50" Margin="0,0,0,15">
+                    <Label
+                        Text="RETURN DATE"
+                        WidthRequest="275"
+                        VerticalOptions="Center"
+                        FontAttributes="Bold"
+                        FontSize="Medium"
+                        FontFamily="Courier New"
+                    ></Label>
+                    <DatePicker
+                        Margin="25, 0, 0, 0"
+                        BackgroundColor="DodgerBlue"
+                        WidthRequest="500"
+                        x:Name="ReturnDatePicker"
+                    ></DatePicker>
                 </HorizontalStackLayout>
             </VerticalStackLayout>
             <Button

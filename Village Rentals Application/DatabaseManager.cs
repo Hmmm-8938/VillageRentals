@@ -51,9 +51,17 @@ namespace Village_Rentals_Application
             return database.Query<Client>($@"SELECT * FROM Client");
         }
 
-        public static void AddRental(int rentalId, DateTime rentalDate, string client, string customerLastName, string rentalEquipment)
+        public static void AddRental(int rentalId, DateTime rentalDate, string client, string customerLastName, string rentalEquipment, DateTime returnDate)
         {
-            database.Execute($@"INSERT INTO RENTAL (rentalId, rentalDate, client, customerLastName, rentalEquipment) VALUES ('{rentalId}','{rentalDate}','{client}','{customerLastName}','{rentalEquipment}')");
+            database.Execute($@"INSERT INTO RENTAL (rentalId, rentalDate, client, customerLastName, rentalEquipment, returnDate) VALUES ('{rentalId}','{rentalDate}','{client}','{customerLastName}','{rentalEquipment}', '{returnDate}')");
+        }
+
+        public static void Cost(double dailyRentalCost, DateTime rentalDate, DateTime returnDate)
+        {
+            string isoReturnDate = returnDate.ToString("yyyy-MM-dd");
+            string isoRentalDate = rentalDate.ToString("yyyy-MM-dd");
+            database.Execute($@"UPDATE RENTAL SET cost = (julianday('{returnDate.ToString("yyyy-MM-dd")}') - julianday('{rentalDate.ToString("yyyy-MM-dd")}')) * {dailyRentalCost} WHERE cost IS NULL");
+            //database.Execute($@"UPDATE RENTAL SET cost = DATEDIFF({isoReturnDate}, {isoRentalDate}) * {dailyRentalCost} WHERE cost IS NULL");
         }
     }
 }
