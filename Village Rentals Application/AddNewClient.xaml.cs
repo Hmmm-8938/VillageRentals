@@ -20,7 +20,6 @@ public partial class AddNewClient : ContentPage
         string clientEmail = ClientEmail.Text;
         DatabaseManager.AddClient(clientIDInt, clientLastName, clientFirstName, clientContactPhone, clientEmail);
         await DisplayAlert("Client Added", "You have succcessfully added a new client.", "OK");
-        await Navigation.PushAsync(new AddEquipment());
         await Navigation.PushAsync(new AddNewClient());
     }
 }
